@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>小米商城</title>
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/js/bootstrap.js">
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.css">
+    <!--<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"不可用，图标显示不出来>-->
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="css/iconfont.css" rel="stylesheet">
+</head>
+<body>
+    <div class="topbar">
+        <div class="Container">
+            <!--商城项目  -->
+            <div style="float: left">
+                <a>小米商城</a>
+                <span class="span">|</span>
+                <a>MIUI</a>
+                <span class="span">|</span>
+                <a>LOT</a>
+                <span class="span">|</span>
+                <a>云服务</a>
+                <span>|</span>
+                <a>金融</a>
+                <span class="span">|</span>
+                <a>小品</a>
+                <span class="span">|</span>
+                <a>小爱开发平台</a>
+                <span class="span">|</span>
+                <a>政企服务</a>
+                <span class="span">|</span>
+                <a>SelectRegion</a>
+            </div>
+            <!--登录消息-->
+            <div style="float: right">
+                <a>登录</a>
+                <span class="span">|</span>
+                <a>注册</a>
+                <span class="span">|</span>
+                <a>消息通知</a>
+                <div class="shoppingcart">
+                    <img src="img/sider-shopcar.png" class="shoppingcartIcon">
+                    <span>购物车(0)</span>
+                </div>
+            </div>
+        <div class="clearBoth"></div>
+        </div>
+    </div>
+    <div class="head_nav">
+        <div class="Container head1">
+            <div class="leftnav">
+                <ul>
+                    <li><a href=""><img src="img/mi-logo.png" class="MIIcon"></a></li>
+                    <li><a href=""><img src="img/nav.gif" class="mishaoIcon"></a></li>
+                    <li><a href="">小米</a></li>
+                    <li><a href="">红米</a></li>
+                    <li><a href="">电视</a></li>
+                    <li><a href="">笔记本</a></li>
+                    <li><a href="">空调</a></li>
+                    <li><a href="">新品</a></li>
+                    <li><a href="">路由器</a></li>
+                    <li><a href="">智能硬件</a></li>
+                    <li><a href="">服务</a></li>
+                    <li><a href="">社区</a></li>
+                </ul>
+            </div>
+            <div class="rightnav">
+                <form action="">
+                    <input type="text" class="SearchBox" ><button type="submit" class="SearchBtn">
+                    <i id="fa-search" class="fa fa-search"></i></button>
+                </form>
+                <div class="hotword">
+                    <a href="">小米8</a>
+                    <a href="">小米MIX 2s</a>
+                </div>
+                <ul class="leftfix search_info">
+                        <li>
+                            <a href="">
+                                <div class="leftfix">小米MIX 2S</div>
+                                <div class="rightfix">约6个结果</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="leftfix">黑鲨游戏机</div>
+                                <div class="rightfix">约12个结果</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="leftfix">小米电视4C</div>
+                                <div class="rightfix">约12个结果</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="leftfix">红米Note5</div>
+                                <div class="rightfix">约18个结果</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="leftfix">净水器</div>
+                                <div class="rightfix">约17个结果</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="leftfix">空气净化器</div>
+                                <div class="rightfix">约31个结果</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="leftfix">笔记本pro</div>
+                                <div class="rightfix">约27个结果</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <div class="leftfix">电视32英寸</div>
+                                <div class="rightfix">约44个结果</div>
+                            </a>
+                        </li>
+                    </ul>
+            </div>
+        <div class="clearBoth"></div>
+        </div>
+    </div>
+        <!--  container   -->
+    <div class="Container lunbo">
+        <!--  中央轮播大图   -->
+        <div id="play" class="play">
+            <ul class="imgList">
+                <li class="current">
+                    <a href=""><img src="img/play01.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="img/play02.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="img/play03.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="img/play04.jpg" alt=""></a>
+                </li>
+                <li>
+                    <a href=""><img src="img/play05.jpg" alt=""></a>
+                </li>
+            </ul>
+            <!-- 图片循环下方圆点按钮 -->
+            <div class="play-list">
+                <span class="current">1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+            </div>
+            <!-- 图片循环左右方向按钮 -->
+            <div class="slide-list">
+                <span class="slide slide-left">&lt;</span>
+                <span class="slide slide-right">&gt;</span>
+            </div>
+        </div>
+        <!-- 左侧菜单列表 -->
+        <div class="site-category">
+            <ul>
+                <li class="category-item">
+                    <span class="site-category-list">手机 电话卡</span>
+                    <span class="gtIcon">&gt;</span>
+                </li>
+                <li class="category-item">
+                    <span class="site-category-list">电视 盒子</span>
+                    <span class="gtIcon">&gt;</span>
+                </li>
+                <li class="category-item">
+                    <span class="site-category-list">笔记本 平板</span>
+                    <span class="gtIcon">&gt;</span>
+                </li>
+                <li class="category-item">
+                    <span class="site-category-list">家电 插线板</span>
+                    <span class="gtIcon">&gt;</span>
+                </li>
+                <li class="category-item">
+                    <span class="site-category-list">出行 穿戴</span>
+                    <span class="gtIcon">&gt;</span>
+                </li>
+                <li class="category-item">
+                    <span class="site-category-list">智能 路由器</span>
+                    <span class="gtIcon">&gt;</span>
+                </li>
+                <li class="category-item">
+                    <span class="site-category-list">电源 配件</span>
+                    <span class="gtIcon">&gt;</span>
+                </li>
+                <li class="category-item">
+                    <span class="site-category-list">个护 儿童</span>
+                    <span class="gtIcon">&gt;</span>
+                </li>
+                <li class="category-item">
+                    <span class="site-category-list">耳机 音箱</span>
+                    <span class="gtIcon">&gt;</span>
+                </li>
+                <li class="category-item">
+                    <span class="site-category-list">生活 箱包</span>
+                    <span class="gtIcon">&gt;</span>
+                </li>
+            </ul>
+        </div>
+        <div class="clearBoth"></div>
+    </div>
+    <!-- 轮播图下方一排小图 -->
+    <div class="home-service-list">
+        <div class="iconfont-list" title="轮播图下方小图左侧图标">
+            <ul class="channel-list">
+                <li class="top-left">
+                    <a href="">
+                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                        选购手机
+                    </a>
+                </li>
+                <li class="top-center">
+                    <a href="">
+                        <span class="fa fa-gift" aria-hidden="true"></span>
+                        企业团购
+                    </a>
+                </li>
+                <li class="top-right">
+                    <a href="">
+                        <span class="iconfont icon-fma"></span>
+                        F码通道
+                    </a>
+                </li>
+                <li class="sec-right">
+                    <a href="">
+                        <span class="iconfont icon-mifenqia-copy"></span>
+                        米粉卡
+                    </a>
+                </li>
+                <li class="sec-right">
+                    <a href="">
+                        <span class="iconfont icon-yijiuhuanxin"></span>
+                        以旧换新
+                    </a>
+                </li>
+                <li class="sec-right">
+                    <a href="">
+                        <span class="iconfont icon-huafeichongzhi-copy"></span>
+                        话费充值
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="img1List" title="轮播图下方右侧小图">
+            <ul class="img1_ul">
+                <li class="firstImg">
+                    <a href="#">
+                        <img alt="8se 减100" src="img/小米8.jpg">
+                    </a>
+                </li>
+                <li class="secondImg">
+                    <a href="#">
+                        <img alt="8se 减100" src="img/红米6Pro.jpg">
+                    </a>
+                </li>
+                <li class="threeImg">
+                    <a href="#">
+                        <img alt="8se 减100" src="img/空气净化器MAX.jpg">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="clearBoth"></div>
+    </div>
+    <!-- 小米闪购  -->
+    <div class="xiaomiShanGou">
+        <div class="shangouHead">
+            <div class="shangouTitle">
+                <h2 class="title">小米闪购</h2>
+                <div class="more">
+                  <ul class="pagination">
+                    <li>
+                      <a href="#" aria-label="Previous">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" aria-label="Next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="clearBoth"></div>
+            </div>
+        </div>
+        <div class="shangouContent">
+            <div class="goodsList">
+                <ul class="goodsList-ul">
+                    <li class="goods1Info">
+                        <div class="changci">20:00场</div>
+                        <a href=""><img src="img/shangou.png"></a>
+                        <div class="countdownTip">距离开始还有</div>
+                        <div class="countdownTime">
+                            <div class="box">00</div>
+                            <div class="dosh">:</div>
+                            <div class="box">20</div>
+                            <div class="dosh">:</div>
+                            <div class="box">29</div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="miaoshaGoods">
+                    <ul class="miaoshaGoods-ul">
+                        <li class="goods2Info">
+                            <div class="zhekou">减100</div>
+                            <div class="goodsPic"><a href=""><img src="img/shangou3.jpg" alt=""><div class="bg"></div></a></div>
+                            <div class="goodsname">小米电视4A 55英寸</div>
+                            <div class="goodsinfo">4K HDR,64位处理器</div>
+                            <div class="goodsprice">
+                                <span class="span1">1399元</span>
+                                <span class="span2"><del>699元</del></span>
+                            </div>
+                        </li>
+                        <li class="goods3Info">
+                            <div class="zhekou">5折秒杀</div>
+                            <div class="goodsPic"><a href=""><img src="img/shangou2.jpg" alt=""><div class="bg"></div></a></div>
+                            <div class="goodsname">小米电视4A 55英寸</div>
+                            <div class="goodsinfo">4K HDR,64位处理器</div>
+                            <div class="goodsprice">
+                                <span class="span1">1399元</span>
+                                <span class="span2"><del>699元</del></span>
+                            </div>
+                        </li>
+                        <li class="goods4Info">
+                            <div class="zhekou">减300</div>
+                            <div class="goodsPic"><a href=""><img src="img/shangou4.jpg" alt=""><div class="bg"></div></a></div>
+                            <div class="goodsname">小米电视4A 55英寸</div>
+                            <div class="goodsinfo">4K HDR,64位处理器</div>
+                            <div class="goodsprice">
+                                <span class="span1">1399元</span>
+                                <span class="span2"><del>699元</del></span>
+                            </div>
+                        </li>
+                        <li class="goods5Info">
+                            <div class="zhekou">5折秒杀</div>
+                            <div class="goodsPic"><a href=""><img src="img/shangou4.jpg" alt=""><div class="bg"></div></a></div>
+                            <div class="goodsname">小米电视4A 55英寸</div>
+                            <div class="goodsinfo">4K HDR,64位处理器</div>
+                            <div class="goodsprice">
+                                <span class="span1">1399元</span>
+                                <span class="span2"><del>699元</del></span>
+                            </div>
+                        </li>
+                        <li class="goods6Info">
+                            <div class="zhekou">5折秒杀</div>
+                            <div class="goodsPic"><a href=""><img src="img/shangou4.jpg" alt=""><div class="bg"></div></a></div>
+                            <div class="goodsname">小米电视4A 55英寸</div>
+                            <div class="goodsinfo">4K HDR,64位处理器</div>
+                            <div class="goodsprice">
+                                <span class="span1">1399元</span>
+                                <span class="span2"><del>699元</del></span>
+                            </div>
+                        </li>
+                        <li class="goods7Info">
+                            <div class="zhekou">5折秒杀</div>
+                            <div class="goodsPic"><a href=""><img src="img/shangou4.jpg" alt=""><div class="bg"></div></a></div>
+                            <div class="goodsname">小米电视4A 55英寸</div>
+                            <div class="goodsinfo">4K HDR,64位处理器</div>
+                            <div class="goodsprice">
+                                <span class="span1">1399元</span>
+                                <span class="span2"><del>699元</del></span>
+                            </div>
+                        </li>
+                        <li class="goods8Info">
+                            <div class="zhekou">5折秒杀</div>
+                            <div class="goodsPic"><a href=""><img src="img/shangou4.jpg" alt=""><div class="bg"></div></a></div>
+                            <div class="goodsname">小米电视4A 55英寸</div>
+                            <div class="goodsinfo">4K HDR,64位处理器</div>
+                            <div class="goodsprice">
+                                <span class="span1">1399元</span>
+                                <span class="span2"><del>699元</del></span>
+                            </div>
+                        </li>
+                        <li class="goods9Info">
+                            <div class="zhekou">5折秒杀</div>
+                            <div class="goodsPic"><a href=""><img src="img/shangou4.jpg" alt=""><div class="bg"></div></a></div>
+                            <div class="goodsname">小米电视4A 55英寸</div>
+                            <div class="goodsinfo">4K HDR,64位处理器</div>
+                            <div class="goodsprice">
+                                <span class="span1">1399元</span>
+                                <span class="span2"><del>699元</del></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearBoth"></div>
+            </div>
+        </div>
+    </div>
+    <!--结束闪购-->
+    <div class="ad1">
+        <a href=""><img src="img/ad1.jpg" alt="小米8 干推"></a>
+    </div>
+    <div class="phone">
+        <div class="Container">
+        <div class="phoneHead">
+            <div class="phoneTitle">
+                <h2 class="title">手机</h2>
+                <div class="more rightfix">
+                    <a href="">
+                        查看全部
+                        <span class="fonticon">&gt</span>
+                    </a>
+                </div>
+                <div class="clearBoth"></div>
+            </div>
+         </div>
+
+        <div class="phoneList">
+            <div class="leftAd leftfix">
+                <ul class="leftAd-ul">
+                    <li class="leftAdPic">
+                        <a href=""><img src="img/phone-小米Max3.jpg"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="rightfix phoneGoods">
+                <ul class="phoneGoods-ul">
+                    <li class="leftfix phoneInfo">
+                        <div class="zhekou xinpin">新品</div>
+                        <div class="goodsPic"><a href=""><img src="img/phone-小米8青春版.jpg" alt=""><div class="bg"></div></a></div>
+                        <div class="goodsname">小米电视4A 55英寸</div>
+                        <div class="goodsinfo">4K HDR,64位处理器</div>
+                        <div class="goodsprice">
+                            <span class="span1">1399元</span>
+                            <span class="span2"><del>699元</del></span>
+                        </div>
+                        <div class="pingjia">
+                            <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                            <div class="pingjia-2">来自Vary-Len的评价</div>
+                        </div>
+                    </li>
+                    <li class="leftfix phoneInfo">
+                        <div class="zhekou xinpin">新品</div>
+                        <div class="goodsPic"><a href=""><img src="img/phone-小米8屏幕指纹版.png" alt=""><div class="bg"></div></a></div>
+                        <div class="goodsname">小米电视4A 55英寸</div>
+                        <div class="goodsinfo">4K HDR,64位处理器</div>
+                        <div class="goodsprice">
+                            <span class="span1">1399元</span>
+                            <span class="span2"><del>699元</del></span>
+                        </div>
+                        <div class="pingjia">
+                            <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                            <div class="pingjia-2">来自Vary-Len的评价</div>
+                        </div>
+                    </li>
+                    <li class="leftfix phoneInfo">
+                        <div class="zhekou">减300</div>
+                        <div class="goodsPic"><a href=""><img src="img/phone-红米S2.jpg" alt=""><div class="bg"></div></a></div>
+                        <div class="goodsname">小米电视4A 55英寸</div>
+                        <div class="goodsinfo">4K HDR,64位处理器</div>
+                        <div class="goodsprice">
+                            <span class="span1">1399元</span>
+                            <span class="span2"><del>699元</del></span>
+                        </div>
+                        <div class="pingjia">
+                            <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                            <div class="pingjia-2">来自Vary-Len的评价</div>
+                        </div>
+                    </li>
+                    <li class="leftfix phoneInfo">
+                        <div class="zhekou">享6折</div>
+                        <div class="goodsPic"><a href=""><img src="img/phone-小米6x.jpg" alt=""><div class="bg"></div></a></div>
+                        <div class="goodsname">小米电视4A 55英寸</div>
+                        <div class="goodsinfo">4K HDR,64位处理器</div>
+                        <div class="goodsprice">
+                            <span class="span1">1399元</span>
+                            <span class="span2"><del>699元</del></span>
+                        </div>
+                        <div class="pingjia">
+                            <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                            <div class="pingjia-2">来自Vary-Len的评价</div>
+                        </div>
+                    </li>
+                    <li class="leftfix">
+                        <div class="zhekou">减400元</div>
+                        <div class="goodsPic"><a href=""><img src="img/phone-小米8SE.jpg" alt=""><div class="bg"></div></a></div>
+                        <div class="goodsname">小米电视4A 55英寸</div>
+                        <div class="goodsinfo">4K HDR,64位处理器</div>
+                        <div class="goodsprice">
+                            <span class="span1">1399元</span>
+                            <span class="span2"><del>699元</del></span>
+                        </div>
+                    </li>
+                    <li class="leftfix">
+                        <div class="zhekou">5折秒杀</div>
+                        <div class="goodsPic"><a href=""><img src="img/phone-小米Max2.jpg" alt=""><div class="bg"></div></a></div>
+                        <div class="goodsname">小米电视4A 55英寸</div>
+                        <div class="goodsinfo">4K HDR,64位处理器</div>
+                        <div class="goodsprice">
+                            <span class="span1">1399元</span>
+                            <span class="span2"><del>699元</del></span>
+                        </div>
+                    </li>
+                    <li class="leftfix">
+                        <div class="zhekou">5折秒杀</div>
+                        <div class="goodsPic"><a href=""><img src="img/phone-小米MIX2S.jpg" alt=""><div class="bg"></div></a></div>
+                        <div class="goodsname">小米电视4A 55英寸</div>
+                        <div class="goodsinfo">4K HDR,64位处理器</div>
+                        <div class="goodsprice">
+                            <span class="span1">1399元</span>
+                            <span class="span2"><del>699元</del></span>
+                        </div>
+                    </li>
+                    <li class="leftfix">
+                        <div class="zhekou">5折秒杀</div>
+                        <div class="goodsPic"><a href=""><img src="img/phone-小米Max2陶瓷.jpg" alt=""><div class="bg"></div></a></div>
+                        <div class="goodsname">小米电视4A 55英寸</div>
+                        <div class="goodsinfo">4K HDR,64位处理器</div>
+                        <div class="goodsprice">
+                            <span class="span1">1399元</span>
+                            <span class="span2"><del>699元</del></span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="clearBoth"></div>
+        </div>
+        </div>
+
+        <div class="ad1">
+            <a href=""><img src="img/ad2.jpg" alt="小米8 干推"></a>
+        </div>
+        <div class="JiaDian">
+            <div class="JiaDian Container">
+                <div class="JiaDian JiaDianHead">
+                    <div class="JiaDian phoneTitle">
+                        <h2 class="title">家电</h2>
+                        <div class="Other rightfix">
+                            <ul>
+                                <li>热门</li>
+                                <li>电视影音</li>
+                                <li>电脑</li>
+                                <li>家居</li>
+                            </ul>
+                        </div>
+                        <div class="clearBoth"></div>
+                    </div>
+                </div>
+                <div class="JiaDian JiaDianGoods">
+                    <div class="leftfix leftpic">
+                        <a href=""><img class="leftimg" id="leftimg1" src="img/jiadian.jpg"></a>
+                        <a href=""><img class="leftimg" src="img/jiadian02.jpg"></a>
+                    </div>
+                    <div class="rightfix rightgoods">
+                        <!--热门-->
+                        <ul class="active">
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian1.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian1.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian1.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian1.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian1.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian1.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian1.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian1.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                        </ul>
+                        <!--/*电视影音*/-->
+                        <ul>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian6.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian6.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian6.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian6.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian6.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian6.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian6.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian6.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!--/*电脑*/-->
+                        <ul>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian4.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian4.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian4.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian4.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian4.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian4.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian4.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian4.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian4.jpg" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                        </ul>
+                        <!--/*家居*/-->
+                        <ul>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian8.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian8.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian8.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix phoneInfo">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian8.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                                <div class="pingjia">
+                                    <div class="pingjia-1">上穷碧落下黄泉,两处茫茫皆不见.忽闻海上有仙山,山在虚无缥缈间.</div>
+                                    <div class="pingjia-2">来自Vary-Len的评价</div>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian8.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian8.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian8.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                            <li class="leftfix">
+                                <div class="zhekou">5折秒杀</div>
+                                <div class="goodsPic"><a href=""><img src="img/jiadian8.png" alt=""><div class="bg"></div></a></div>
+                                <div class="goodsname">小米电视4A 55英寸</div>
+                                <div class="goodsinfo">4K HDR,64位处理器</div>
+                                <div class="goodsprice">
+                                    <span class="span1">1399元</span>
+                                    <span class="span2"><del>699元</del></span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ad1">
+            <a href=""><img src="img/ad3.jpg" alt="小米8 干推"></a>
+        </div>
+
+        <div class="footer">
+            <div class="Container">
+                <div class="footer-service">
+                    <ul class="list-service">
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-weixiu"></i>
+                                预约维修服务
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-tianwuliyoutuihuo"></i>
+                                7天无理由退货
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-15tianmianfeihuanhuo24px"></i>
+                                15天免费换货
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-man150yuanbaoyou24px"></i>
+                                满150元包邮
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="iconfont icon-520jiashouhouwangdian24px"></i>
+                                520余家售后网点
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-link">
+                    <dl class="col-links">
+                        <dt>帮助中心</dt>
+                        <dd>
+                            <a href="">账户管理</a>
+                        </dd>
+                        <dd>
+                            <a href="">购物指南</a>
+                        </dd>
+                        <dd>
+                            <a href="">订单操作</a>
+                        </dd>
+                    </dl>
+                    <dl class="col-links">
+                        <dt>服务支持</dt>
+                        <dd>
+                            <a href="">售后政策</a>
+                        </dd>
+                        <dd>
+                            <a href="">自助服务</a>
+                        </dd>
+                        <dd>
+                            <a href="">相关下载</a>
+                        </dd>
+                    </dl>
+                    <dl class="col-links">
+                        <dt>线下门店</dt>
+                        <dd>
+                            <a href="">小米之家</a>
+                        </dd>
+                        <dd>
+                            <a href="">服务网点</a>
+                        </dd>
+                        <dd>
+                            <a href="">授权体验店</a>
+                        </dd>
+                    </dl>
+                    <dl class="col-links">
+                        <dt>关于小米</dt>
+                        <dd>
+                            <a href="">了解小米</a>
+                        </dd>
+                        <dd>
+                            <a href="">加入小米</a>
+                        </dd>
+                        <dd>
+                            <a href="">投资者关系</a>
+                        </dd>
+                    </dl>
+                    <dl class="col-links">
+                            <dt>关注我们</dt>
+                            <dd>
+                                <a href="">新浪微博</a>
+                            </dd>
+                            <dd>
+                                <a href="">官方微信</a>
+                            </dd>
+                            <dd>
+                                <a href="">联系我们</a>
+                            </dd>
+                    </dl>
+                    <dl class="col-links">
+                            <dt>特色服务</dt>
+                            <dd>
+                                <a href="">F码通道</a>
+                            </dd>
+                            <dd>
+                                <a href="">礼物码</a>
+                            </dd>
+                            <dd>
+                                <a href="">防伪查询</a>
+                            </dd>
+                    </dl>
+                    <div class="col-contact">
+                        <p class="tel">400-100-5678</p>
+                        <p>周一至周日 8:00-18:00<br>(仅收市话费)</p>
+                        <a href="#" class="customer-contact">
+                            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                            联系客服
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--右侧固定栏入口-->
+        <div class="home-right-bar">
+            <ul>
+                <li class="border-none">
+                    <a href="">
+                        <img src="img/user.png">
+                        <div class="personInfo">个人中心</div>
+                    </a>
+                </li>
+                <li class="border-none">
+                    <a href="">
+                        <img src="img/earphone.png">
+                        <div class="personInfo">联系客服</div>
+                    </a>
+                </li>
+                <li class="border-none">
+                    <a href="">
+                        <img src="img/sider-shopcar.png">
+                        <div class="personInfo">购物车</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="img/top.png">
+                        <div class="personInfo">回到顶部</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 引入js  -->
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+    <script>
+        <!--中央轮播图-->
+        $(function(){
+            var num=0;            //循环变量,定义图片页数
+            var delay = 1000;  //播放时间间隔
+            var length = 5;    //图片张数
+            <!--1.播放图片，n表示当前图-->
+            function playImage(n){
+                $('.play .imgList li').removeClass('current').siblings().eq(n).addClass('current');
+                $('.play-list span').removeClass('current').siblings().eq(n).addClass('current');
+                }
+            <!--2.循环轮播图片函数-->
+            function scrollPicsPlay(){
+                num++;
+                if (num>=length){
+                    num=0;
+                }
+                playImage(num);
+                }
+            //3..设置图片播放时间间隔
+            var timeSpan = setInterval(scrollPicsPlay,delay);
+            //设置属性
+            //4.1.鼠标悬浮 不轮播
+			$('.play').on('mouseenter', function(){
+				clearInterval(timeSpan);
+			}).on('mouseleave', function(){
+				timeSpan = setInterval(scrollPicsPlay, delay)
+			});
+			//4.2给圆点按钮绑定事件
+			$('.play-list span').on('click', function(){
+				num = $(this).index();
+				playImage(num);
+			});
+			//4.3.右边图片绑定事件
+			$('.slide-right').on('click', function(){
+				num++;
+				if (num >= length) {
+					num = 0;
+				}
+				playImage(num)
+			});
+			//4.4.左边图片绑定事件
+			$('.slide-left').on('click', function(){
+				num --;
+				if (num < 0) {
+					num = length-1
+				}
+				playImage(num)
+			});
+        });
+    </script>
+    <script>
+        <!--//点击搜索框出现下拉框-->
+		$('.SearchBox').on("click",function(){
+		    $(this).add('.SearchBtn').css('border','1px solid #ff6700').parent().next().hide();
+		    $(this).parent().nextAll('.search_info').show()
+		    });
+
+        $('.SearchBox').on("blur",function(){
+		    $(this).add('.SearchBtn').css('border','1px solid #e0e0e0').parent().next().show();
+		    $(this).parent().nextAll('.search_info').hide()
+		    });
+
+         <!--//滑出评价-->
+        var pingjiaHover=document.querySelectorAll(".JiaDian .rightgoods li");
+        pingjiaHover.forEach(function(value,index){
+                              $(pingjiaHover[index]).on("mouseenter",function(){
+                                $(this).find(".pingjia").slideDown(500)})
+                                });
+        pingjiaHover.forEach(function(value,index){
+                              $(pingjiaHover[index]).on("mouseleave",function(){
+                                $(this).find(".pingjia").slideUp(500)})
+                                });
+        $('.JiaDianHead li').on('mouseenter', function () {
+			$('.rightgoods ul').removeClass('active').eq($(this).index()).addClass('active');
+		});
+
+    </script>
+</body>
+</html>
