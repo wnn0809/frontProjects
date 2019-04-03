@@ -1,0 +1,28 @@
+1.组件中的内容在页面中不显示？
+解决：在js文件中注册组件时组件单词写法错误，如下写法：
+{
+      path: '/',
+      components: {
+      	PartOne: PartOne,
+      	PartTwo: PartTwo,
+      	PartThree: PartThree,
+      	PartFour: PartFour,
+      	PartFive: PartFive,
+      	PartSix: PartSix,
+      	PartSeven: PartSeven
+      }
+    },
+ 原现象是将components写 成了component。
+
+
+ 2.vue路径@和..的区别：
+ const PartOne = () => import('@/components/PartOne');
+
+ import store from './vuex/store'是相对路径，代表当前路径同级下vuex下的store。
+ import store from '@/vuex/store'也是相对路径，和上面意思差不多，但是具体代表什么路径，要看你webpack里面对于@是如何配置的。在build文件夹下webpack.base.conf.js可找到@，'@': resolve('src')表示指向src文件夹。
+
+ ./: 当前目录下;
+../: 父级目录;
+
+
+3.banner图片响应式未实现，import 'element-ui/lib/theme-chalk/display.css';引入不成功
