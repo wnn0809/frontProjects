@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=divice-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>todoList</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body>
+
+	<div class="main-container" id="app">
+		<!-- 头部标题 -->
+		<div class="header">
+			<!-- <h2>突然的idea</h2> -->
+		</div>
+		<!-- 内容区 -->
+		<div class="content">
+			<!-- 输入框 -->
+			<div class="content-input-todo">
+				<input type="text" placeholder="Plase Write Your Dream..." v-model='todo' @keyup.enter="addTodoItem">
+				<button @click="addTodoItem">加入计划</button>
+			</div>
+			<!-- 事件列表区域 -->
+			<div class="content-list">
+				<!-- 计划完成 -->
+				<div class="content-list-todo">
+					<h4>运筹帷幄于心中</h4>
+					<p>待完成</p>
+					<ul>
+						<li v-for="todoItem in todoInfos" :key="todoItem.id" v-if="todoItem.state==0">
+							<input type="checkbox" @change="todoItem.state=1">
+							<!-- biaoti -->
+							<span class="todo-title" v-if="!todoItem.isEdit"  v-text="todoItem.todoTitle" v-on:click="todoItem.isEdit=true"></span>
+							<input v-if="todoItem.isEdit" @blur="todoItem.isEdit = false" @keyup.enter="todoItem.isEdit = false" type="text" v-model="todoItem.todoTitle">
+							<span class="icon-recycle" v-on:click="todoItem.state=2"></span>
+						</li>
+					</ul>
+				</div>
+				<!-- 已完成 -->
+				<div class="content-list-finish">
+					<h4>黄金百战穿金甲</h4>
+					<p>已完成</p>
+					<ul>
+						<li v-for="finishItem in todoInfos" :key="finishItem.id" v-if="finishItem.state==1">
+							<!-- <input type="checkbox" @change="finishItem.state=0"> -->
+							<!-- 返回按钮 -->
+              				<span class="content-list-recycle-back" @click="finishItem.state = 0;"></span>
+							<span class="todo-title" v-text="finishItem.todoTitle" v-if="!finishItem.isEdit" @click="finishItem.isEdit=true"></span>
+							<input v-if="finishItem.isEdit" @blur="finishItem.isEdit = false" @keyup.enter="finishItem.isEdit = false" type="text" v-model="finishItem.todoTitle">
+							<span class="icon-recycle" v-on:click="finishItem.state=2"></span>
+						</li>
+					</ul>
+				</div>
+				<!-- 计划回收 -->
+				<div class="content-list-recycle">
+					<h4>不破楼兰终不还</h4>
+					<p>焚毁</p>
+					<ul>
+						<li v-for="recycleItem in todoInfos" :key="recycleItem.id" v-if="recycleItem.state==2">
+							 <!-- 返回按钮 -->
+              				<span class="content-list-recycle-back" @click="recycleItem.state = 0;"></span>
+							<!-- 标题 -->
+							<span class="todo-title" v-text="recycleItem.todoTitle" v-if="!recycleItem.isEdit" v-on:click="recycleItem.isEdit=true"></span>
+							<!-- 修改 -->
+							<input v-if="recycleItem.isEdit" @blur="recycleItem.isEdit = false" @keyup.enter="recycleItem.isEdit = false" type="text" v-model="recycleItem.todoTitle">
+							<!-- 彻底删除 -->
+							<span class="icon-delete" @click="deleteInfo(recycleItem)"></span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 底部 -->
+		<div class="footer">
+			<p>预则立不预则废</p>
+			<p>有恒则断无不成之事</p>
+			<p>@2018-2019 粤ICP备11096666号-66</p>
+		</div>
+	</div>
+  	<script src="https://cdn.bootcss.com/vue/2.5.21/vue.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

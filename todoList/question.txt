@@ -1,0 +1,12 @@
+1.输入的最后一个事项不可修改
+2.border-image: url(../img/border.png) 60 60 stretch;设置的边框不显示。
+解决：border-image: url("../img/border.png") 60 60 stretch;要放在最下面。
+.content-list div{
+	width: 380px;
+	margin-right: 20px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border: 15px solid transparent;
+	border-image: url("../img/border.png") 60 60 stretch;
+}
+此时上面两个问题都解决了
