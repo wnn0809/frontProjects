@@ -1,0 +1,405 @@
+.moli {
+  width: 100%;
+  background: #f5f5f5;
+}
+
+/* 顶部输入框 开始*/
+.top {
+  width: 8.75rem;
+  height: 0.97rem;
+  margin: 0 auto;
+  padding: 0.3rem 0.4rem 0;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+
+.top .location {
+  display: flex;
+  line-height: 0.77rem;
+  font-weight: 700;
+}
+
+.top .ipt-box {
+  width: 6.60rem;
+  height: 0.7rem;
+  background: #f5f5f5;
+  border-radius: 1.5rem;
+  line-height: 0.7rem;
+}
+
+.top .ipt-box .ipt {
+  background: #f5f5f5;
+  font-weight: bold;
+}
+
+.top .ipt-box .icon-sousuo1 {
+  margin-left: 1.2rem;
+}
+
+.top .icon-shenglvehao {
+  line-height: 0.7rem;
+}
+
+/* 右上角下拉框  开始*/
+
+.selectbox{
+  width: 2rem;
+  height: 4rem;
+  background: #1c6b64;;
+  z-index: 222;
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  display: none;
+}
+.selectbox .sb-down li{
+  text-align: center;
+  line-height: 0.8rem;
+}
+/* 右上角下拉框 结束 */
+
+/* 顶部输入框 结束 */
+
+/* 轮播图 开始*/
+.swiper-slide {
+  width: 9.6rem;
+  height: 5.17rem;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/*轮播图 结束 */
+
+/* 图标  开始*/
+.icons {
+  width: 100%;
+  height: 3.75rem;
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+
+.icons .icons-box {
+  width: 8.57rem;
+  height: 2.75rem;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.icons .icons-box .icon {
+  width: 20%;
+}
+
+.icons .icons-box .icon .icon-img {
+  width: 100%;
+}
+
+.icons .icons-box .icon .icon-img .icon-img-content {
+  width: 0.6rem;
+  height: 0.6rem;
+}
+
+.icons .icons-box .icon .icon-desc {
+  font-size: 0.3rem;
+}
+/* 图标 结束 */
+
+/* 我的卡包  开始*/
+
+.mycard {
+  height: 4.75rem;
+  background: #fff;
+  margin-top: 0.1rem;
+}
+
+.mycard .mycard-word {
+  font-size: 0.44rem;
+  padding-top: 0.8rem;
+  padding-left: 0.56rem;
+  font-weight: 900;
+}
+
+.mycard .travel-card-box {
+  margin-top: 0.6rem;
+  overflow: hidden;
+}
+
+.mycard .travel-card-box .swiper-wrapper {
+  width: 4rem;
+}
+
+.mycard .travel-card-box .swiper-wrapper .swiper-slide {
+  width: 4rem !important;
+  width: 4rem;
+  height: 2.5rem;
+  margin-right: 0.3rem;
+}
+
+.mycard .travel-card-box .swiper-slide img {
+  width: 4rem;
+  height: 2.5rem;
+}
+/* 我的卡包 结束 */
+
+/* 热门景点 开始*/
+.hotview {
+  height: 11.8rem;
+  background: #fff;
+}
+
+.hotview .hotview-word {
+  font-size: 0.44rem;
+  padding-top: 0.8rem;
+  padding-left: 0.56rem;
+  font-weight: 900;
+}
+
+.hotview .hv-box {
+  /* height: 5.2rem; */
+  display: flex;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.clearfix:after {
+  content: "";
+  height: 0;
+  line-height: 0;
+  display: block;
+  visibility: hidden;
+  clear: both
+}
+
+.clearfix {
+  zoom: 1;
+  /* 为了兼容IE */
+}
+
+.hotview .hotview-pic {
+  width: 6.7rem;
+  margin: 0.6rem 0.4rem 0 0.1rem;
+}
+
+.hotview .hotview-pic .hvp-pict {
+  width: 6.7rem;
+  height: 3.75rem;
+}
+
+.hotview .hotview-pic p {
+  font-weight: 500;
+  line-height: 0.6rem;
+}
+
+/* 精选推荐   使用的是热门景点的模块*/
+.hotview .hotview-pic1{
+  width: 4.5rem;
+  height: 2.5rem;
+}
+.hotview-pic .flower-ticket {
+  width: 4.5rem;
+  height: 2.5rem;
+}
+/* 热门景点 结束 */
+
+/* 附近 智能排序 筛选  开始*/
+.nearby-container {
+  width: 100%;
+  height: 13rem;
+  margin-top: 0.1rem;
+  background: #fff;
+}
+
+.nearby-container .nc-box-01 {
+  height: 1.4rem;
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.nearby-container .nc-box-01 .nearby-word-01 {
+  display: flex;
+  align-items: center;
+}
+
+.nearby-container .nc-box-01 .nearby-word-01 img {
+  width: 0.17rem;
+  height: 0.12rem;
+  margin-left: 0.2rem;
+}
+
+/* 景区详细情况 开始 */
+.nearby-container .nc-box-02 {
+  padding: 0 0.5rem;
+}
+
+.nearby-container .nc-box-02 .ncb-park {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.6rem;
+}
+
+.nearby-container .nc-box-02 .ncb-park-left {
+  width: 3.75rem;
+  height: 2rem;
+}
+
+.nearby-container .nc-box-02 .ncb-park-right {
+  width: 4.5rem;
+  height: 2rem;
+}
+
+.nearby-container .nc-box-02 .ncb-park-right .npr-box01 {
+  display: flex;
+}
+
+.nearby-container .nc-box-02 .ncb-park-right .npr-box01 p:nth-child(1) {
+  width: 0.8rem;
+  height: 0.4rem;
+  font-size: 0.2rem;
+  color: aqua;
+  border: 1px solid aqua;
+  border-radius: 0.1rem;
+  text-align: center;
+  margin-right: 0.2rem;
+  line-height: 0.4rem;
+}
+
+.nearby-container .nc-box-02 .ncb-park-right .npr-box01 p:nth-child(2) {
+  font-size: 0.35rem;
+}
+.nearby-container .nc-box-02 .ncb-park-right .npr-enterpark{
+  height: 0.8rem;
+}
+.nearby-container .nc-box-02 .ncb-park-right .npr-box02 {
+  height: 0.3rem;
+}
+.nearby-container .nc-box-02 .ncb-park-right .npr-box02 p {
+  color: #c8c8c8;
+  font-size: 0.25rem;
+  margin-top: 0.1rem;
+}
+
+.nearby-container .nc-box-02 .ncb-park-right .npr-box03 {
+  display: flex;
+  margin-top: 0.1rem;
+  color: #c8c8c8;
+}
+
+.nearby-container .nc-box-02 .ncb-park-right .npr-box03 p {
+  width: 1.3rem;
+  /* height: 0.4rem; */
+  border: 1px solid #c8c8c8;
+  border-radius: 0.1rem;
+  font-size: 0.2rem;
+  text-align: center;
+  margin-right: 0.15rem;
+}
+
+.nearby-container .nc-box-02 .ncb-park-right .npr-box04 {
+  margin-top: 0.1rem;
+  display: flex;
+  justify-content: space-between;
+  line-height: 0.5rem;
+}
+
+.nearby-container .nc-box-02 .ncb-park-right .npr-box04 p {
+  font-size: 0.1rem;
+  color: #ff932c;
+}
+
+.nearby-container .nc-box-02 .ncb-park-right .npr-box04 .npr-box04-word span {
+  font-size: 0.3rem;
+  color: #c8c8c8;
+}
+
+.nearby-container .nc-box-02 .ncb-park-right .npr-box04 .npr-box04-word .npr-price {
+  font-size: 0.4rem;
+  color: #27b1cd;
+}
+/* 景区详细情况 结束 */
+
+/* 附近 智能排序 筛选  结束*/
+
+/* 底部导航栏  开始*/
+.bottom-nav {
+  background: #f5f5f5;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.bn-homepage img {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.bn-homepage p {
+  text-align: center;
+  font-size: 0.25rem;
+}
+
+.bn-evaluate img {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.bn-evaluate p {
+  text-align: center;
+  font-size: 0.25rem;
+}
+
+.bottom-nav .qr-code {
+  width: 1.4rem;
+  height: 1.4rem;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  background: #fff;
+  
+}
+
+.bottom-nav .qr-code img {
+  width: 0.55rem;
+  height: 0.55rem;
+}
+
+.bottom-nav .qr-code p {
+  font-size: 0.3rem;
+}
+
+.bn-mall img {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 0.05rem;
+}
+
+.bn-mall p {
+  font-size: 0.3rem;
+  text-align: center;
+}
+
+.bn-person img {
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-left: 0.37rem
+}
+
+.bn-person p {
+  font-size: 0.3rem;
+  text-align: center;
+}
+
+/* 底部导航栏的tab切换背景 */
+/* .select{
+  background: red;
+} */
+/* 底部导航栏  结束*/

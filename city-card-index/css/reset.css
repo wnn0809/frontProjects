@@ -1,0 +1,41 @@
+
+body, h1, h2, h3, h4, h5, h6, hr, p, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+body, button, input, select, textarea { font:12px/1.5  "微软雅黑",tahoma, arial, \5b8b\4f53; }
+ h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+em,i { font-style:normal; } 
+b,strong{
+	font-weight: normal;
+}
+
+ul, ol ,li{ list-style:none; } 
+a { text-decoration:none; } 
+a:hover { text-decoration:underline; } 
+sup { vertical-align:text-top; } 
+sub{ vertical-align:text-bottom; } 
+legend { color:#000; } 
+fieldset, img { border:0; } 
+input{
+	border: 0 none;
+	outline: none;
+}
+ table { border-collapse:collapse; border-spacing:0; }
+
+img{
+	border: 0 none;
+}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+.clearfix:after{
+	content: "";
+	height: 0;
+	clear: both;
+	visibility: hidden;
+	display: block;
+}
+.clearfix{
+	*zoom:1;
+}
+
