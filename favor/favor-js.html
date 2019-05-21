@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 135px;
+            border: 1px solid green;
+            width: 800px;
+            margin: 0 auto;
+        }
+        .item{
+            position: relative;
+            width: 30px;
+        }
+        p {
+            margin-left: 20px;
+            color: blue;
+            font-weight: 600;
+        }
+        .item img {
+            width: 60px;
+            height: 35px;
+            margin-top: 8px;
+            margin-left: 20px;
+        }
+        .item span {
+            margin-top: -41px;
+            margin-left: 48px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>风急天高猿啸哀，渚清沙白鸟飞回。无边落木萧萧下，不尽长江滚滚来</p>
+        <p>万里悲秋常作客，百年多病独登台。艰难苦恨繁霜鬓，潦倒新停浊酒杯</p>
+        <div class="item">
+            <img src="img/timg.jpg" onclick="add(this)" >
+            <span id="addone">0</span>
+        </div>
+    </div>
+    <div class="container">
+        <p>风急天高猿啸哀，渚清沙白鸟飞回。无边落木萧萧下，不尽长江滚滚来</p>
+        <p>万里悲秋常作客，百年多病独登台。艰难苦恨繁霜鬓，潦倒新停浊酒杯</p>
+        <div class="item">
+            <img src="img/timg.jpg" onclick="add1(this)" >
+            <span id="addone1">0</span>
+        </div>
+    </div>
+    <div class="container">
+        <p>风急天高猿啸哀，渚清沙白鸟飞回。无边落木萧萧下，不尽长江滚滚来</p>
+        <p>万里悲秋常作客，百年多病独登台。艰难苦恨繁霜鬓，潦倒新停浊酒杯</p>
+        <div class="item">
+            <img src="img/timg.jpg" onclick="add2(this)" >
+            <span id="addone2">0</span>
+        </div>
+    </div>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script>
+        $('.item').click(function () {
+            AddFavor(this);
+        });
+        // //实现数字加1
+        var num =0;
+        var num1 = 0;
+        var num2 = 0;
+        function add(self) {
+            num++;
+            document.getElementById('addone').innerText = num;
+
+        }
+        function add1(self) {
+            num1++;
+            document.getElementById('addone1').innerText = num1;
+
+        }
+        function add2(self) {
+            num2++;
+            document.getElementById('addone2').innerText = num2;
+
+        }
+
+        //点赞函数
+        function AddFavor(self) {
+            // DOM对象,设置+1的字体、位置和透明度
+            var fontSize = 15;
+            var top = 0;
+            var right = 0;
+            var opacity = 1;
+
+            var tag = document.createElement('span');
+            $(tag).text('+1');
+            $(tag).css('color','green');
+            $(tag).css('position','absolute');
+            $(tag).css('fontSize',fontSize + "px");
+            $(tag).css('right',right + "px");
+            $(tag).css('top',top + 'px');
+            $(tag).css('opacity',opacity);
+            $(self).append(tag);
+
+            var obj = setInterval(function () {
+                //字体逐渐增大
+                fontSize = fontSize + 10;
+                //向右上角移动，距离顶部位置和右侧均每次减少10px
+                top = top - 10;
+                right = right - 10;
+                //透明度一次减少0.1
+                opacity = opacity - 0.1;
+
+                //随时间变化修改+1标签的css样式
+                $(tag).css('fontSize',fontSize + "px");
+                $(tag).css('right',right + "px");
+                $(tag).css('top',top + 'px');
+                $(tag).css('opacity',opacity);
+                if(opacity < 0){
+                    clearInterval(obj);
+                    $(tag).remove();
+                }
+            }, 40);
+
+        }
+    </script>
+</body>
+</html>
