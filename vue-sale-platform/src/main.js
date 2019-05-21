@@ -5,6 +5,7 @@ import VueRouter from 'vue-router'
 import Layout from './components/layout'
 import IndexPage from './pages/index'
 import LoginForm from './pages/loginForm'
+import GoodsList from './pages/goodsList.vue'
 
 Vue.use(VueRouter)
 // Vue.config.productionTip = false
@@ -26,6 +27,14 @@ let router = new VueRouter({
 			component: LoginForm,
 			meta: {
 				title: '登录'
+			}
+		},
+		{
+			path: '/goods',
+			name: 'goods',
+			component: GoodsList,
+			meta: {
+				title: '商品列表'
 			}
 		},
 	]

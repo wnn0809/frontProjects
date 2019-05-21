@@ -1,41 +1,8 @@
 <!-- container部分即首页内容部分 -->
 <template lang="html">
-	<!-- header  -->
 	<div>
-		<div class="app-head">
-			<div class="app-head-inner">
-				<router-link :to="{path: '/'}">
-					<!-- 公司logo图案 -->
-					<div class="logo">
-						<img src="../assets/logo.png">
-						<p>DATA PROTUCT</p>
-					</div>
-				</router-link>
-				<!-- 导航栏右侧登录注册 -->
-				<div class="head-nav">
-					<ul class="nav-list1">
-						<li>首页</li>
-						<li>产品介绍</li>
-						<li>解决方案</li>
-						<li>售后服务</li>
-						<li>联系我们</li>
-					</ul>
-					<ul class="nav-list2">
-						<!-- <li>{{ username }}</li> -->
-						<li>注册</li>
-						<!-- 分割线 -->
-						<li class="nav-pile">|</li>
-						<!-- 使用router-link实现跳转到登录页面，tag属性使其渲染成对应标签-->
-						<router-link :to="{path: '/login'}" tag='li'>
-							登录
-						</router-link>
-						<!-- <li @click="goLogin">登录</li> -->
-						<li class="nav-pile">|</li>
-						<li>关于</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+		<!-- header  -->
+		<Header></Header>
 		<div class="container">
 			<div class="index-wrap">
 				<!-- 左侧产品栏和新闻栏 -->
@@ -78,7 +45,7 @@
 								<p>{{ item.description }}</p>
 								<div class="index-board-buybutton">
 									<!-- 使用router-link跳转到购买页面 -->
-									<router-link class="button" :to="{path: 'detail/'+item.toKey}">立即购买</router-link>
+									<router-link :to="{path: '/goods'}">查看商品</router-link>
 								</div>
 							</div>
 						</div>
@@ -86,32 +53,19 @@
 				</div>
 			</div>
 		</div>
-		<div class="app-foot">
-			<p>@2019-2029 by w1418899532</p>
-			<p>版权所有  侵权必究</p>
-		</div>
+		<Footer></Footer>
 	</div>
 </template>
 
 <script>
 	import slideShow from '../components/slideShow.vue'
+	import Footer from '../components/footer.vue'
+	import Header from '../components/header.vue'
     export default {
-    	data() {
-    		//初始化
-    		return {
-    			
-    		}
-    	},
-	    methods: {
-	    	goLogin: function () {
-	    		// if ($route.meta.title=='登录'){
-	    		// 	this.$router.push({path: '/login'});
-	    		// }
-	    		// this.$router.push({path: '/login'});
-	    	}
-	    },
     	components: {
-    		slideShow
+    		slideShow,
+    		Footer,
+    		Header,
     	},
     // 	// 
 	  	// created: function () {
@@ -368,61 +322,11 @@
 	    display: inline-block;
 	}
 
-	.app-head{
-		background: #363636;
-		color: #b2b2b2;
-		height: 90px;
-		line-height: 90px;
-		width: 100%;
-	}
-	.app-head-inner{
-		width: 1200px;
-		margin: 0 auto;
-	}
-	.app-head-inner img{
-		width: 50px;
-		margin-top: 12px;
-		margin-left: 40px;
-	}
-	.app-head-inner p{
-		margin-top: -71px;
-    	margin-left: 10px;
-	}
-	.logo{
-		float: left;
-	}
-	.head-nav {
-		float: right;
-	}
-	.head-nav ul{
-		overflow: hidden;
-	}
-	.head-nav li{
-		cursor: pointer;
-		float: left;
-	}
-	.nav-pile{
-		padding: 0px 10px;
-	}
-	.head-nav .nav-list1{
-		float: left;
-		padding: 0px 58px;
-	}
-	.head-nav .nav-list1 li{
-		padding: 0px 20px;
-	}
+	
 	.container {
 	  width: 1200px;
 	  margin: 0 auto;
 	}
 	
-	.app-foot{
-		height: 90px;
-		background: #e3e4e8;
-		text-align: center;
-		margin-top: 30px;
-	}
-	.app-foot p{
-		padding-top: 25px;
-	}
+	
 </style>
