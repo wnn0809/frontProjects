@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue商城购物车功能实现</title>
+	<!-- //引入vue的cdn -->
+	<script src="https://cdn.bootcss.com/vue/2.6.10/vue.js"></script>
+	<!-- 引入bootstrap -->
+	<link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+		body{
+			background: url(./img/bg.jpg) no-repeat;
+			background-size: 100%;
+		}
+		.row {
+			    opacity: 0.9;
+		}
+		.table img {
+			width: 45px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container" id="app">
+		<div class="row">
+			<template v-if="goods.length===0">
+				<!-- v-if判断购物车中没有商品时 -->
+				<div class="panel panel-default" >
+					<div class="panel-body">
+						<p>购物车空空如也~~~</p>
+					</div>
+				</div>
+			</template>
+			<template v-else>
+				<!-- bootstrap的面板组件包含带标题的面板、带表格的面板灯 -->
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h3 class="panel-title">我的购物车</h3>
+					</div>
+					<div class="panel-body">
+						<!-- 带表格的面板 table-hover:鼠标悬停高亮的表格-->
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th><input type="checkbox" @click="selectAll" v-model="allChecked"></th>
+									<th>商品名称</th>
+									<th>商品单价</th>
+									<th>购买数量</th>
+									<th>小计</th>
+									<th>商品操作</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr v-for="(item,index) in goods">
+									<td>
+										<input type="checkbox" @click="select(item.id)" :checked="allSelectData.indexOf(item.id)!=-1">
+									</td>
+									<td>
+										<img :src="item.src" :title="item.name">{{ item.name }}
+									</td>
+									<td>{{ item.price }}</td>
+									<!-- 商品数量前后有加减按钮 -->
+									<td>
+										<button @click="reduce(index)">-</button>
+										<!-- 使用v-model绑定商品数量 -->
+										<input type="text" v-model="item.num" style="width: 26px;text-align: center;">
+										<!-- 为加号绑定函数,将商品的索引作为参数 -->
+										<button @click="add(index)">+</button>
+									</td>
+									<td>{{ item.price*item.num }}</td>
+									<td>
+										<div class="btn-group btn-group-xs">
+											<button class="btn btn-danger" type="button" @click="del(index)">删除</button>
+										</div>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+					<!-- 带脚注的面板 -->
+					<div class="panel-footer" style="text-align: right;">
+						共计<span>{{totalPrice}}元</span>
+					</div>
+				</div>
+			</template>
+			
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		new Vue({
+			el: '#app',
+			data: {
+				//模拟购物车数据
+				goods:[
+					{id:1,name:'极米 （XGIMI ）Play特别版 投影机 投影仪 家用 便携（单手可握 侧投 HDR10解码哈曼卡顿音响内置电池）',price:2499,num:1,src:'./img/bread.jpg'},
+					{id:2,name:'荣耀MagicBook 2019 14英寸轻薄窄边框笔记本电脑（AMD锐龙7 3700U 8G 512G FHD IPS 指纹解锁）冰河银',price:4985,num:1,src:'./img/phone2.jpg'},
+					{id:3,name:'盼盼 手撕面包 饼干蛋糕整箱大礼包箱装 奶香味2000g',price:52.5,num:2,src:'./img/computer.jpg'},
+					{id:4,name:'洗面奶洗面奶洗面奶洗面奶洗面奶洗面奶洗面奶洗面奶',price:56,num:3,src:'./img/phone2.jpg'},
+					{id:5,name:'联想 K5 Note 4GB+64GB 6英寸全面屏双摄手机 全网通 移动4G+ 双卡双待 极地黑',price:999,num:1,src:'./img/computer.jpg'},
+					{id:6,name:'小米MIX2 全面屏游戏手机 6GB+64GB 黑色 全网通4G手机 双卡双待 5.99"大屏',price:1299,num:1,src:'./img/computer.jpg'},
+					{id:7,name:'Apple MacBook Pro 15.4英寸笔记本电脑 银色（2017款Multi-Touch Bar/Core',price:15888,num:1,src:'./img/phone2.jpg'},
+					{id:8,name:'OPPO R15 全面屏双摄拍照手机 4G+128G 幻色粉 全网通 移动联通电信',price:2799,num:1,src:'./img/phone.jpg'},
+				],
+				// 控制全选
+				allChecked:false,
+				// 商品数据选中
+				allSelectData:[],
+			},
+			methods: {
+				// 购物车数量增加
+				add(index){
+					// goods商品列表中的第index个商品数量自加
+					// Vue是双向绑定，只需此处进行相加即可
+					this.goods[index].num++;
+				},
+				// 购物车数减少
+				reduce(index){
+					this.goods[index].num--;
+					// 当数量为0时，删除此条商品
+					if(this.goods[index].num==0){
+						this.goods.splice(index,1);
+					}
+				},
+				// 删除
+				del(index){
+					this.goods.splice(index,1);
+				},
+				selectAll(){
+					// console.log(event.currentTarget.checked);
+					if(!event.currentTarget.checked){
+						// 取消全选
+						this.allSelectData=[];
+					}else{
+						// 全选
+						this.goods.forEach((item,index)=>{
+							// 将所有商品id存在数组allSelectData
+							this.allSelectData.push(item.id);
+						})
+					}
+				},
+				select(id){
+					//判断当前点击的商品对应的id是否在allSelectData数组中
+					var res = this.allSelectData.indexOf(id);
+					res == -1 ? this.allSelectData.push(id) : this.allSelectData.splice(res,1);
+					// this.goods.length == this.allSelectData.length相等为true时全选，不等为false，取消全选
+					this.allChecked = this.goods.length == this.allSelectData.length;
+				}
+			},
+			// 总价的计算使用计算属性
+			computed: {
+				totalPrice(){
+					var total = 0;
+					// 使用forEach循环读取goods中数据
+					this.goods.forEach((item,index)=>{
+						// 是否选中商品会影响总价，只计算选中商品的总价
+						var res = this.allSelectData.indexOf(item.id);
+						if(res != -1){
+							// 总价累加
+							total += item.num*item.price;
+						}
+					});
+					return total;
+				}
+			}
+		})
+	</script>
+</body>
+</html>
