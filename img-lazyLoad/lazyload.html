@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>资源懒加载原理分析</title>
+	<style type="text/css">
+		h2 {
+			margin-left: 38px;
+    		color: blue;
+		}
+		.lazy {
+			width: 300px;
+			height: 300px;
+		}
+		.imgs {
+			width: 400px;
+			margin:0 auto;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="imgs">
+		<h2>图片懒加载原理分析</h2>
+		<div class="imglist">
+			<!--src存放的是一个伪图片，等待的图片，只有1-2k，  data-src是自定义属性，存放真实的图片地址-->
+			<img class="lazy" src="img/loading.gif" data-src="img/pic1.jpg" alt="pic">
+			<img class="lazy" src="img/loading.gif" data-src="img/pic2.jpg" alt="pic">
+			<img class="lazy" src="img/loading.gif" data-src="img/pic3.jpg" alt="pic">
+			<img class="lazy" src="img/loading.gif" data-src="img/pic4.jpg" alt="pic">
+			<img class="lazy" src="img/loading.gif" data-src="img/pic5.jpg" alt="pic">
+			<img class="lazy" src="img/loading.gif" data-src="img/pic6.jpg" alt="pic">
+			<img class="lazy" src="img/loading.gif" data-src="img/pic7.jpg" alt="pic">
+			<img class="lazy" src="img/loading.gif" data-src="img/pic8.jpg" alt="pic">
+		</div>
+	</div>
+	<!-- 引入写的懒加载实现js文件 -->
+	<script src="js/lazyload.js"></script>
+</body>
+</html>
