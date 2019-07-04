@@ -11,7 +11,7 @@ Vue.use(VueRouter)
 // Vue.config.productionTip = false
 
 let router = new VueRouter({
-	mode: 'history',
+	
 	routes: [
 		{
 			path: '/',

@@ -45,7 +45,9 @@
 								<p>{{ item.description }}</p>
 								<div class="index-board-buybutton">
 									<!-- 使用router-link跳转到购买页面 -->
-									<router-link :to="{path: '/goods'}">查看商品</router-link>
+									<router-link :to="{path: '/goods'}">
+										<span class="goodBtn">查看商品</span>
+									</router-link>
 								</div>
 							</div>
 						</div>
@@ -321,7 +323,15 @@
 	    padding: 10px 22px;
 	    display: inline-block;
 	}
-
+	.goodBtn{
+		background: #4fc08d;
+		color: #fff;
+	    display: flex;
+	    width: 100px;
+	    height: 30px;
+	    justify-content: center;
+	    align-items: center;
+	}
 	
 	.container {
 	  width: 1200px;
