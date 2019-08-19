@@ -52,8 +52,8 @@
 	    margin-top: -10px;
 	}
 	.sever-list{
-		//margin-top:25px;
-	   //border-top: 1px solid #034493;
+		/*margin-top:25px;
+	   	border-top: 1px solid #034493;*/
 	}
 	.sever-list .severTitle{
 	    margin-top: 15px;
@@ -63,6 +63,6 @@
 		margin-top:10px;
 	    width: 185px;
 	    border-radius: 10px;
-	    background-color: cyan;
+	    background-color: #ccc;
 	}
 </style>

@@ -1,9 +1,9 @@
 <template>
   <div class="app" id="app">
     <div class="banner">
-      <!--img class="hidden-xl-only hidden-lg-only hidden-md-only" :src="bannerXSSM" alt="banner图"-->
+      <img class="hidden-xl-only hidden-lg-only hidden-md-only" :src="bannerXSSM" alt="banner图">
       <img class="hidden-xs-only hidden-sm-only hidden-md-only" :src="bannerLGXL" alt="banner图">
-      <!--img class="hidden-xs-only hidden-sm-only hidden-lg-only" :src="bannerMD" alt="banner图"-->
+      <img class="hidden-xs-only hidden-sm-only hidden-lg-only" :src="bannerMD" alt="banner图">
       <h1>信令管理系统</h1>
     </div>
     <!-- 第一行 -->
@@ -51,19 +51,25 @@ export default {
 </script>
 
 <style>
+  html,body {
+    height: 100%;
+    overflow: hidden;
+  }
   body{
     background:#011128;
     color:#fff;
   }
   .app{
-    width:100%;
+    width:95%;
+    margin: auto;
   }
   .part{
     padding:10px 15px 15px 20px;
   }
   .banner{
-    width:100%;
+    width:97%;
     height:80px;
+     margin: auto;
   }
   p{
     text-align:center;
@@ -71,7 +77,7 @@ export default {
   .banner h1{
     position: relative;
     margin-top: -52px;
-    margin-left: 145px;
+    margin-left: 74px;
     font-size: xx-large;
   }
 </style>

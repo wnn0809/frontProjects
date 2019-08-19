@@ -190,7 +190,7 @@
 <style scoped>
 	.part-six{
 		width:100%;
-		height:430px;
+		height:410px;
 		border: 40px solid transparent;
 		border-image: url("../assets/img/border-image.png") 30 30 stretch;
 		background: #18202d;
