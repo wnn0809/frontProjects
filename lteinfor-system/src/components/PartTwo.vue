@@ -6,7 +6,7 @@
 
 <script>
 	//引入 echarts
-   	let echarts = require("echarts/lib/echarts.js");
+   	// let echarts = require("echarts/lib/echarts.js");
     //<!-- 引入 china.js -->
 	require('echarts/map/js/china.js');
 
@@ -21,7 +21,7 @@
 		methods:{
 			drawMap(){
 				// 基于准备好的dom，初始化echarts实例
-      			let myChart = echarts.init(document.getElementById("part-two"));
+      			let myChart = this.$echarts.init(document.getElementById("part-two"));
 
       			var geoCoordMap = {
 			    '上海': [121.4648,31.2891],

@@ -7,7 +7,7 @@
 <script>
 	
 	// 引入基本模板
-	let echarts = require("echarts/lib/echarts.js");
+	// let echarts = require("echarts/lib/echarts.js");
 
 	export default{
 		name:"partthree",
@@ -20,7 +20,7 @@
 		methods:{
 			drawEcharts(){
 				// 基于准备好的dom，初始化echarts实例
-      			let myChart = echarts.init(document.getElementById("part-three")); 
+      			let myChart = this.$echarts.init(document.getElementById("part-three")); 
 
       			myChart.setOption({
 			        // 标题
