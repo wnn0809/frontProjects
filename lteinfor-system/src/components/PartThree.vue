@@ -79,7 +79,7 @@
 <style scoped>
 	.part-three {
 		width:100%;
-		height:420px;
+		height:410px;
 		border: 15px solid transparent;
 		border-image: url("../assets/img/border-image.png") 30 30 stretch;
 		background: #18202d;

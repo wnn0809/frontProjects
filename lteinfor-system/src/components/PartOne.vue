@@ -3,7 +3,7 @@
 		<div class="operatorMode">
 			<span class="wordDesc">说明：<br>信令解析分为信令接入和协议解析两部分，信令管理系统在保证协议解析状态正常的情况下着重管理运营商接入原始信令数据。</span>
 			<form name="form1" method='post'>
-			<br>模式匹配<br>运营商选择：<br>
+			运营商选择：<br>
 			&nbsp&nbsp<input type="radio" name="radio1" value="chinamobile" checked="checked">&nbsp中国移动<br>
 			&nbsp&nbsp<input type="radio" name="radio1" value="chinaunicom">&nbsp中国电信<br>
 			&nbsp&nbsp<input type="radio" name="radio1" value="chinatelecom">&nbsp中国联通<br>
@@ -34,8 +34,8 @@
 <style scoped>
 	.part-one {
 		width:100%;
-		height:420px;
-		border: 40px solid transparent;
+		height:410px;
+		border: 35px solid transparent;
 		border-image: url("../assets/img/border-image.png") 30 30 stretch;
 		background: #18202d;
 		font-size: 17px;
@@ -49,14 +49,14 @@
         margin-top: -18px;
 	}
 	.operatorMode form{
-	    margin-top: -10px;
+	    margin-top: 12px;
 	}
 	.sever-list{
 		/*margin-top:25px;
 	   	border-top: 1px solid #034493;*/
 	}
 	.sever-list .severTitle{
-	    margin-top: 15px;
+	    margin-top: 10px;
     	display: flex;
 	}
 	.sever-list .selectbox{

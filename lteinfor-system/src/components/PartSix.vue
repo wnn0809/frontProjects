@@ -38,13 +38,13 @@
 						{
 							name:'关联率',
 							type:'gauge',
-							center : ['50%', '70%'],    // 全局位置设置
+							center : ['50%', '73%'],    // 全局位置设置
 							//startAngle:180,//开始角度，左侧角度
 							//startAngle:0,//结束角度，侧角度
 							min:0,
-							max:100,
-							splitNumber:10,
-							radius: '80%',//设置仪表盘的大小
+							max:80,
+							splitNumber:5,
+							radius: '75%',//设置仪表盘的大小
 							axisLine: {            // 坐标轴线
 								lineStyle: {       // 属性lineStyle控制线条样式
 									color: [[0.09, '#FF0000'],[0.82, '#75caff'],[1, '#ff4500']],
@@ -55,10 +55,10 @@
 							},
 							axisLabel: {            // 坐标轴小标记
 								textStyle: {       // 属性lineStyle控制线条样式
-									fontWeight: 'bolder',
+									// fontWeight: 'bolder',
 									color: '#fff',
 									shadowColor : '#fff', //默认透明
-									shadowBlur: 10
+									shadowBlur: 6
 								}
 							},
 							axisTick: {            // 坐标轴小标记
@@ -66,7 +66,7 @@
 								lineStyle: {       // 属性lineStyle控制线条样式
 									color: 'auto',
 									shadowColor : '#fff', //默认透明
-									shadowBlur: 10
+									shadowBlur: 6
 								}
 							},
 							splitLine: {           // 分隔线
@@ -85,8 +85,8 @@
 							title : {
 								offsetCenter: [2, '100%'],
 								textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-									fontWeight: 'bolder',
-									fontSize: 15,
+									// fontWeight: 'bolder',
+									fontSize: 14,
 									fontStyle: 'italic',
 									color: '#fff',
 									shadowColor : '#fff', //默认透明
@@ -101,32 +101,33 @@
 								shadowBlur: 5,
 								offsetCenter: [0, '70%'],       // x, y，单位px
 								textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-									fontWeight: 'bolder',
-									color: '#fff'
+									// fontWeight: 'bolder',
+									color: '#fff',
+									fontSize: 18
 								}
 							},
-							data:[{value: 40, name: 'RelationRatio(%)'}]
+							data:[{value: 72, name: 'RelationRatio(%)'}]
 						},
 						{
 							name:'输入率',
 							type:'gauge',
 							center : ['50%', '22%'],    // 全局位置设置
-							radius : '80%',
+							radius : '66%',
 							min:0,
 							max:12,
 							//endAngle:10,
-							splitNumber:10,
+							splitNumber:6,
 							axisLine: {            // 坐标轴线
 								lineStyle: {       // 属性lineStyle控制线条样式
 									color: [[0.29, '#FF0000'],[0.86, '#75caff'],[1, '#ff4500']],
 									width: 2,
 									shadowColor : '#fff', //默认透明
-									shadowBlur: 10
+									shadowBlur: 5
 								}
 							},
 							axisLabel: {            // 坐标轴小标记
 								textStyle: {       // 属性lineStyle控制线条样式
-									fontWeight: 'bolder',
+									// fontWeight: 'bolder',
 									color: '#fff',
 									shadowColor : '#fff', //默认透明
 									shadowBlur: 10
@@ -155,14 +156,14 @@
 								shadowBlur: 5
 							},
 							title : {
-								offsetCenter: [-2, '100%'],       // x, y，单位px
+								offsetCenter: [0, '102%'],       // x, y，单位px
 								textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-									fontWeight: 'bolder',
+									// fontWeight: 'bolder',
 									fontStyle: 'italic',
-									fontSize: 16,
+									fontSize: 14,
 									color: '#fff',
 									shadowColor : '#fff', //默认透明
-									shadowBlur: 10
+									shadowBlur: 6
 								}
 							},
 							detail : {
@@ -170,16 +171,17 @@
 							   // borderWidth: 1,
 								borderColor: '#fff',
 								shadowColor : '#fff', //默认透明
-								shadowBlur: 5,
+								shadowBlur: 6,
 								width: 80,
 								height:30,
 								offsetCenter: [0, '70%'],       // x, y，单位px
 								textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
-									fontWeight: 'bolder',
-									color: '#fff'
+									// fontWeight: 'bolder',
+									color: '#fff',
+									fontSize: 18
 								}
 							},
-							data:[{value: 4, name: 'DataInput(GB)'}]
+							data:[{value: 5, name: 'DataInput(GB)'}]
 						}]
 				})
 			}
@@ -191,7 +193,7 @@
 	.part-six{
 		width:100%;
 		height:410px;
-		border: 40px solid transparent;
+		border: 35px solid transparent;
 		border-image: url("../assets/img/border-image.png") 30 30 stretch;
 		background: #18202d;
 	}

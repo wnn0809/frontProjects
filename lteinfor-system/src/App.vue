@@ -53,14 +53,14 @@ export default {
 <style>
   html,body {
     height: 100%;
-    overflow: hidden;
+    /*overflow: hidden;*/
   }
   body{
     background:#011128;
     color:#fff;
   }
   .app{
-    width:95%;
+    width:90%;
     margin: auto;
   }
   .part{
