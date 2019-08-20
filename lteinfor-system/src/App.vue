@@ -1,7 +1,7 @@
 <template>
   <div class="app" id="app">
     <div class="banner">
-      <img class="hidden-xl-only hidden-lg-only hidden-md-only" :src="bannerXSSM" alt="banner图">
+      <!-- <img class="hidden-xl-only hidden-lg-only hidden-md-only" :src="bannerXSSM" alt="banner图"> -->
       <img class="hidden-xs-only hidden-sm-only hidden-md-only" :src="bannerLGXL" alt="banner图">
       <img class="hidden-xs-only hidden-sm-only hidden-lg-only" :src="bannerMD" alt="banner图">
       <h1>信令管理系统</h1>
