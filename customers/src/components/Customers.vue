@@ -24,7 +24,7 @@
         <template slot-scope="scope">
           <el-button
             size="mini"
-            @click="dialogFormVisible = true">编辑</el-button>
+            @click="handleEdit(scope.$index, scope.row)">编辑</el-button>
           <el-button
             size="mini"
             type="danger"
@@ -46,30 +46,38 @@
       </el-pagination>
     </div>
     </article>
-    <!-- 编辑弹出对话框 -->
-    <el-dialog title="收货地址" :visible.sync="dialogFormVisible">
-      <el-form :model="form">
-        <el-form-item label="活动名称" :label-width="formLabelWidth">
-          <el-input v-model="form.name" autocomplete="off"></el-input>
-        </el-form-item>
-        <el-form-item label="账号" :label-width="formLabelWidth">
-          <el-input v-model="form.name" autocomplete="off"></el-input>
-        </el-form-item>
-        <el-form-item label="密码" :label-width="formLabelWidth">
-          <el-input v-model="form.name" autocomplete="off"></el-input>
-        </el-form-item>
-        <el-form-item label="活动区域" :label-width="formLabelWidth">
-          <el-select v-model="form.region" placeholder="请选择活动区域">
-            <el-option label="区域一" value="shanghai"></el-option>
-            <el-option label="区域二" value="beijing"></el-option>
-          </el-select>
-        </el-form-item>
-      </el-form>
-      <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogFormVisible = false">取 消</el-button>
-        <el-button type="primary" @click="dialogFormVisible = false">确 定</el-button>
-      </div>
-    </el-dialog>
+    <!-- 动态添加表单 -->
+    <el-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="100px" class="demo-dynamic" style="width: 400px;">
+    <el-form-item
+      prop="email"
+      label="邮箱"
+      :rules="[
+        { required: true, message: '请输入邮箱地址', trigger: 'blur' },
+        { type: 'email', message: '请输入正确的邮箱地址', trigger: ['blur', 'change'] }
+      ]"
+    >
+    <el-input v-model="dynamicValidateForm.email"></el-input>
+    </el-form-item>
+  <el-form-item
+    v-for="(domain, index) in dynamicValidateForm.domains"
+    :label="'域名' + index"
+    :key="domain.key"
+    :prop="'domains.' + index + '.value'"
+    :rules="{
+      required: true, message: '域名不能为空', trigger: 'blur'
+    }"
+  >
+  <div class="flex">
+    <el-input class="inputform" v-model="domain.value"></el-input>
+    <img class="deleteicon" @click.prevent="removeDomain(domain)" src="../assets/delete.png">
+  </div>
+  </el-form-item>
+  <el-form-item>
+    <el-button type="primary" @click="submitForm('dynamicValidateForm')">提交</el-button>
+    <el-button @click="addDomain">新增域名</el-button>
+    <el-button @click="resetForm('dynamicValidateForm')">重置</el-button>
+  </el-form-item>
+</el-form>
   </div>
 </template>
 
@@ -148,20 +156,12 @@ export default {
       currentPage: 1,
       // 控制每页显示数据条数
       pagesize: 5,
-      // 对话框
-      dialogTableVisible: false,
-      dialogFormVisible: false,
-      form: {
-        name: '',
-        region: '',
-        date1: '',
-        date2: '',
-        delivery: false,
-        type: [],
-        resource: '',
-        desc: ''
-      },
-      formLabelWidth: '120px'
+      dynamicValidateForm: {
+        domains: [{
+          value: ''
+        }],
+        email: ''
+      }
     }
   },
   methods: {
@@ -171,11 +171,49 @@ export default {
     },
     handleCurrentChange (val) {
       console.log(`当前页${val}`)
+    },
+    submitForm (formName) {
+      this.$refs[formName].validate((valid) => {
+        if (valid) {
+          alert('submit!')
+        } else {
+          console.log('error submit!!')
+          return false
+        }
+      })
+    },
+    resetForm (formName) {
+      this.$refs[formName].resetFields()
+    },
+    removeDomain (item) {
+      var index = this.dynamicValidateForm.domains.indexOf(item)
+      if (index !== -1) {
+        this.dynamicValidateForm.domains.splice(index, 1)
+      }
+    },
+    addDomain () {
+      this.dynamicValidateForm.domains.push({
+        value: '',
+        key: Date.now()
+      })
     }
   }
-
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped></style>
+<style scoped>
+/* .el-input__inner {
+  width: 300px;
+} */
+  .flex {
+    display: flex;
+    width: 325px;
+  }
+  .deleteicon {
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;
+    margin-left: 5px;
+  }
+</style>
