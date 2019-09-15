@@ -58,26 +58,38 @@
     >
     <el-input v-model="dynamicValidateForm.email"></el-input>
     </el-form-item>
-  <el-form-item
-    v-for="(domain, index) in dynamicValidateForm.domains"
-    :label="'域名' + index"
-    :key="domain.key"
-    :prop="'domains.' + index + '.value'"
-    :rules="{
-      required: true, message: '域名不能为空', trigger: 'blur'
-    }"
-  >
-  <div class="flex">
-    <el-input class="inputform" v-model="domain.value"></el-input>
-    <img class="deleteicon" @click.prevent="removeDomain(domain)" src="../assets/delete.png">
+    <el-form-item
+      v-for="(domain, index) in dynamicValidateForm.domains"
+      :label="'域名' + (index + 1)"
+      :key="domain.key"
+      :prop="'domains.' + index + '.value'"
+      :rules="{
+        required: true, message: '域名不能为空', trigger: 'blur'
+      }"
+    >
+    <div class="flex">
+      <el-input class="inputform" v-model="domain.value"></el-input>
+      <img class="deleteicon" @click.prevent="removeDomain(domain)" src="../assets/delete.png">
+    </div>
+    </el-form-item>
+    <el-form-item>
+      <el-button type="primary" @click="submitForm('dynamicValidateForm')">提交</el-button>
+      <el-button @click="addDomain">新增域名</el-button>
+      <el-button @click="resetForm('dynamicValidateForm')">重置</el-button>
+    </el-form-item>
+  </el-form>
+  <!-- 树形结构实现 -->
+  <div class="el_tree">
+    <el-tree
+      :data="treedata"
+      show-checkbox
+      :default-expanded-keys="[1, 9]"
+      node-key="id"
+      ref="tree"
+      highlight-current
+      :props="defaultProps">
+    </el-tree>
   </div>
-  </el-form-item>
-  <el-form-item>
-    <el-button type="primary" @click="submitForm('dynamicValidateForm')">提交</el-button>
-    <el-button @click="addDomain">新增域名</el-button>
-    <el-button @click="resetForm('dynamicValidateForm')">重置</el-button>
-  </el-form-item>
-</el-form>
   </div>
 </template>
 
@@ -86,6 +98,45 @@ export default {
   name: 'customers',
   data () {
     return {
+      treedata: [{
+        id: 1,
+        label: '一级 1',
+        children: [{
+          id: 4,
+          label: '二级 1-1',
+          children: [{
+            id: 9,
+            label: ['三级 1-1-1', '三级 1-2-1', '三级 1-3-1']
+          }, {
+            id: 10,
+            label: '三级 1-1-2'
+          }]
+        }]
+      }, {
+        id: 2,
+        label: '一级 2',
+        children: [{
+          id: 5,
+          label: '二级 2-1'
+        }, {
+          id: 6,
+          label: '二级 2-2'
+        }]
+      }, {
+        id: 3,
+        label: '一级 3',
+        children: [{
+          id: 7,
+          label: '二级 3-1'
+        }, {
+          id: 8,
+          label: '二级 3-2'
+        }]
+      }],
+      defaultProps: {
+        children: 'children',
+        label: 'label'
+      },
       tableData: [{
         date: '2016-05-02',
         name: '王小虎',
