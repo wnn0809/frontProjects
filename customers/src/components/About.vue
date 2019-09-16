@@ -65,7 +65,7 @@ export default {
         // language_url: '/tinymce/langs/zh_CN.js',
         // language: 'zh_CN',
         // disabled: true,
-        skin_url: '/tinymce/skins/ui/oxide',
+        skin_url: '/static/tinymce/skins/ui/oxide',
         height: 500,
         menubar: false,
         browser_spellcheck: true,
