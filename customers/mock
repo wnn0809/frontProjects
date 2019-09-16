@@ -1,0 +1,81 @@
+
+可选择的大楼类型
+data: [{search: true, typeName: "教学楼", click: true, typeCode: 10},…]
+0: {search: true, typeName: "教学楼", click: true, typeCode: 10}
+1: {search: true, typeName: "行政办公楼", click: true, typeCode: 11}
+2: {search: true, typeName: "学生寝室楼", click: true, typeCode: 12}
+3: {search: true, typeName: "餐厅食堂", click: true, typeCode: 13}
+4: {search: true, typeName: "家属院", click: true, typeCode: 14}
+5: {search: true, typeName: "实验楼", click: true, typeCode: 15}
+6: {search: true, typeName: "体育馆", click: true, typeCode: 16}
+7: {search: true, typeName: "校门进出口", click: true, typeCode: 17}
+8: {search: true, typeName: "生活服务楼", click: true, typeCode: 18}
+9: {search: true, typeName: "图书馆", click: true, typeCode: 19}
+10: {search: true, typeName: "医院", click: true, typeCode: 20}
+11: {search: true, typeName: "其他", click: true, typeCode: 21}
+
+分页查询审核流程
+content: [{process_name: "1111", update_time: "2019-09-16T11:34:03.866+0800", campus_name: "重庆工商江北校区",…},…]
+0: {process_name: "1111", update_time: "2019-09-16T11:34:03.866+0800", campus_name: "重庆工商江北校区",…}
+1: {process_id: 16, process_name: "2222", campus_name: "西南交大", auditor_name: "教务处→学生处",…}
+2: {update_time: "2019-09-16T16:47:32.462+0800", process_name: "66666", process_id: 34,…}
+3: {process_name: "3333", process_id: 36, update_time: "2019-09-16T17:13:30.112+0800",…}
+4: {process_name: "77777", process_id: 37, update_time: "2019-09-16T17:14:12.831+0800",…}
+5: {process_name: "88888", process_id: 38, update_time: "2019-09-16T17:14:29.090+0800",…}
+6: {campus_name: "华西测试校区", process_name: "99999", process_id: 39, auditor_name: "学生处",…}
+7: {campus_name: "成功大学", process_name: "000000", process_id: 40, auditor_name: "学生处",…}
+8: {process_name: "111111", campus_name: "西南交大", process_id: 41, auditor_name: "学生处",…}
+9: {process_name: "123", process_id: 43, campus_code: 12, auditor_name: "学生处", campus_name: "测试",…}
+10: {process_name: "1234", campus_name: "测试1", campus_code: 12, auditor_name: "学生处",…}
+
+获取房间类型
+data: {number: 0, last: true, size: 100, numberOfElements: 45, totalPages: 1,…}
+content: [{search: true, typeName: "卫生间", click: true, typeCode: 31},…]
+0: {search: true, typeName: "卫生间", click: true, typeCode: 31}
+1: {search: true, typeName: "值班室1", click: true, typeCode: 34}
+2: {search: true, typeName: "储藏室", click: true, typeCode: 36}
+3: {search: true, typeName: "阳台", click: true, typeCode: 37}
+4: {search: true, typeName: "配电间", click: true, typeCode: 38}
+5: {search: true, typeName: "饮水区", click: true, typeCode: 39}
+6: {search: true, typeName: "阅览室", click: true, typeCode: 41}
+7: {search: true, typeName: "实验室", click: true, typeCode: 42}
+8: {search: true, typeName: "智慧教室", click: true, typeCode: 43}
+9: {search: true, typeName: "多媒体教室", click: true, typeCode: 44}
+10: {search: true, typeName: "教研室", click: true, typeCode: 45}
+11: {search: true, typeName: "考场", click: true, typeCode: 46}
+12: {search: true, typeName: "科研室", click: true, typeCode: 47}
+13: {search: true, typeName: "自修室", click: true, typeCode: 48}
+14: {search: true, typeName: "普通教室", click: true, typeCode: 49}
+15: {search: true, typeName: "资料室", click: true, typeCode: 50}
+16: {search: true, typeName: "练习室", click: true, typeCode: 51}
+17: {search: true, typeName: "书库", click: true, typeCode: 52}
+18: {search: true, typeName: "值班室", click: true, typeCode: 53}
+19: {search: true, typeName: "管理室", click: true, typeCode: 54}
+20: {search: true, typeName: "办公室", click: true, typeCode: 55}
+21: {search: true, typeName: "业务室", click: true, typeCode: 56}
+22: {search: true, typeName: "会议室", click: true, typeCode: 57}
+23: {search: true, typeName: "洽谈室", click: true, typeCode: 58}
+24: {search: true, typeName: "报告厅", click: true, typeCode: 59}
+25: {search: true, typeName: "展览馆", click: true, typeCode: 60}
+26: {search: true, typeName: "博物馆", click: true, typeCode: 61}
+27: {search: true, typeName: "纪念馆", click: true, typeCode: 62}
+28: {search: true, typeName: "咨询室", click: true, typeCode: 63}
+29: {search: true, typeName: "活动室", click: true, typeCode: 64}
+30: {search: true, typeName: "各类商店", click: true, typeCode: 65}
+31: {search: true, typeName: "餐饮类", click: true, typeCode: 66}
+32: {search: true, typeName: "医疗室", click: true, typeCode: 67}
+33: {search: true, typeName: "移动通信", click: true, typeCode: 68}
+34: {search: true, typeName: "水房", click: true, typeCode: 69}
+35: {search: true, typeName: "浴室", click: true, typeCode: 70}
+36: {search: true, typeName: "洗衣房", click: true, typeCode: 71}
+37: {search: true, typeName: "晾衣间", click: true, typeCode: 72}
+38: {search: true, typeName: "文印室", click: true, typeCode: 73}
+39: {search: true, typeName: "休息室", click: true, typeCode: 74}
+40: {search: true, typeName: "其他", click: true, typeCode: 75}
+41: {search: true, typeName: "清洁室", click: true, typeCode: 76}
+42: {search: true, typeName: "宿舍", click: true, typeCode: 77}
+43: {search: true, typeName: "寄存处", click: true, typeCode: 84}
+44: {search: true, typeName: "借阅处", click: true, typeCode: 85}
+
+
+富文本框架Tinymce

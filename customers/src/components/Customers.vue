@@ -1,6 +1,7 @@
 <template>
   <div class="customers">
     <article style="background:#eee">
+      <p>table表格</p>
       <!-- table表格 -->
       <el-table
       :data="tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)"
@@ -47,6 +48,7 @@
     </div>
     </article>
     <!-- 动态添加表单 -->
+    <p>动态添加表单</p>
     <el-form :model="dynamicValidateForm" ref="dynamicValidateForm" label-width="100px" class="demo-dynamic" style="width: 400px;">
     <el-form-item
       prop="email"
@@ -79,6 +81,7 @@
     </el-form-item>
   </el-form>
   <!-- 树形结构实现 -->
+  <p>树形结构实现</p>
   <div class="el_tree">
     <el-tree
       :data="treedata"
@@ -90,6 +93,24 @@
       :props="defaultProps">
     </el-tree>
   </div>
+  <!-- 模糊搜索 -->
+  <p>模糊搜索</p>
+  <el-autocomplete
+    v-model="state"
+    :fetch-suggestions="querySearchAsync"
+    placeholder="请输入内容"
+  ></el-autocomplete>
+  <p>模糊搜索</p>
+  <p>模糊搜索</p>
+  <p>模糊搜索</p>
+  <p>模糊搜索</p>
+  <p>模糊搜索</p>
+  <p>模糊搜索</p>
+  <p>模糊搜索</p>
+  <p>模糊搜索</p>
+  <p>模糊搜索</p>
+  <p>模糊搜索</p>
+  <p>模糊搜索</p>
   </div>
 </template>
 
@@ -212,7 +233,11 @@ export default {
           value: ''
         }],
         email: ''
-      }
+      },
+      list: [],
+      seachList: [],
+      state: '',
+      timeout: null
     }
   },
   methods: {
@@ -247,7 +272,45 @@ export default {
         value: '',
         key: Date.now()
       })
+    },
+    // 模糊搜索
+    loadAll () {
+      return [
+        {process_name: '1111', update_time: '2019-09-16', campus_name: '淮南小区',},
+        {process_name: '1111', update_time: '11:34:03', campus_name: '四川大学清水校区', auditor_name: '教研室'},
+        {update_time: '2019-09-16 16:47:32', process_name: '66666', process_id: 34},
+        {campus_name: '测试校区', process_name: '99999', process_id: 39, auditor_name: '科研处'},
+        {campus_name: '比比大学', process_name: '000000', process_id: 40, auditor_name: '学生处'},
+        {process_id: 16, process_name: '2222', campus_name: '觉悟大学', auditor_name: '教务处→学生处'}
+      ]
+    },
+    querySearchAsync (queryString, cb) {
+      var dataList = this.list
+      dataList.forEach(item => {
+        this.seachList.push({
+          id: item.process_id,
+          value: item.auditor_name
+        })
+      })
+      console.log('this.seachList',this.seachList)
+      var results = queryString ? this.seachList.filter(this.createStateFilter(queryString)) : this.seachList
+      console.log('results',results)
+      clearTimeout(this.timeout)
+      this.timeout = setTimeout(() => {
+        cb(results)
+      }, 3000 * Math.random())
+    },
+    createStateFilter (queryString) {
+      return (state) => {
+        if (state.id !== undefined && state.value !== undefined) {
+          // ===0 筛选的数据只是首字匹配的列表项，！==-1包含输入字的所有列表项
+          return (state.value.toLowerCase().indexOf(queryString.toLowerCase()) !== -1)
+        }
+      }
     }
+  },
+  mounted () {
+    this.list = this.loadAll()
   }
 }
 </script>
