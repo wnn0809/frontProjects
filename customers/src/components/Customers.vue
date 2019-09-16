@@ -276,7 +276,7 @@ export default {
     // 模糊搜索
     loadAll () {
       return [
-        {process_name: '1111', update_time: '2019-09-16', campus_name: '淮南小区',},
+        {process_name: '1111', update_time: '2019-09-16', campus_name: '淮南小区'},
         {process_name: '1111', update_time: '11:34:03', campus_name: '四川大学清水校区', auditor_name: '教研室'},
         {update_time: '2019-09-16 16:47:32', process_name: '66666', process_id: 34},
         {campus_name: '测试校区', process_name: '99999', process_id: 39, auditor_name: '科研处'},
@@ -292,13 +292,13 @@ export default {
           value: item.auditor_name
         })
       })
-      console.log('this.seachList',this.seachList)
+      // console.log('this.seachList', this.seachList)
       var results = queryString ? this.seachList.filter(this.createStateFilter(queryString)) : this.seachList
-      console.log('results',results)
+      // console.log('results', results)
       clearTimeout(this.timeout)
       this.timeout = setTimeout(() => {
         cb(results)
-      }, 3000 * Math.random())
+      }, 1000 * Math.random())
     },
     createStateFilter (queryString) {
       return (state) => {
