@@ -5,23 +5,20 @@
       <!-- table表格 -->
       <el-table
       :data="tableData.slice((currentPage-1)*pagesize,currentPage*pagesize)"
-      border
-      style="width: 80%; margin: auto;">
+      style="width: 80%; margin: auto;"
+      :show-header="false">
       <el-table-column
         prop="date"
-        label="日期"
         width="180">
       </el-table-column>
       <el-table-column
         prop="name"
-        label="姓名"
         width="180">
       </el-table-column>
       <el-table-column
-        prop="address"
-        label="地址">
+        prop="address">
       </el-table-column>
-      <el-table-column label="操作">
+      <el-table-column>
         <template slot-scope="scope">
           <el-button
             size="mini"
@@ -315,6 +312,14 @@ export default {
 }
 </script>
 
+<style>
+  .el-table td, .el-table th.is-leaf {
+    border-bottom: none;
+  }
+  .el-table_1_column_3 .cell {
+    background: #cccccc;
+  }
+</style>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 /* .el-input__inner {
