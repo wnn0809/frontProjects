@@ -19,7 +19,8 @@ const router = new VueRouter({
   base: __dirname,
   routes: [
     {path: '/', component: () => import('./components/Customers')},
-    {path: '/about', component: () => import('./components/About')}
+    {path: '/about', component: () => import('./components/About')},
+    {path: '/slide', component: () => import('./components/slide')}
   ]
 })
 

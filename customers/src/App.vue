@@ -15,6 +15,7 @@
           <ul class="nav navbar-nav">
             <li><router-link to="/">主页</router-link></li>
             <li><router-link to="/about">关于我们</router-link></li>
+            <li><router-link to="/slide">左右滑动</router-link></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
