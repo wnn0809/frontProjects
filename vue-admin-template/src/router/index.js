@@ -179,6 +179,27 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/getParentId',
+    component: Layout,
+    redirect: '/getParentId/getAllParentId',
+    name: 'getAllParentId',
+    meta: { title: '树形结构', icon: 'component' },
+    children: [
+      {
+        path: 'getAllParentId',
+        name: 'getAllParentId',
+        component: () => import('@/views//getParentId/getAllParentId'),
+        meta: { title: '树形结构', icon: 'component' }
+      }
+      // {
+      //   path: 'otherSetting',
+      //   name: 'otherSetting',
+      //   component: () => import('@/views/getParentId/otherSetting'),
+      //   meta: { title: '其他配置', icon: 'component' }
+      // }
+    ]
+  },
 
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
